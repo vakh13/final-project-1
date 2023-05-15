@@ -1,6 +1,6 @@
 "use strict";
 
-// burger bar
+
 
 let navUl = document.querySelector(".nav-ul");
 let burger = document.querySelector(".burger-div");
@@ -23,7 +23,7 @@ let header = document.querySelector(".full-header");
 
 window.onscroll = function () {
   let top = window.scrollY;
-  //   console.log(top);
+  
   if (top >= 80) {
     header.classList.add("active");
   } else {
@@ -31,7 +31,7 @@ window.onscroll = function () {
   }
 };
 
-// start customers section
+
 
 fetch("https://reqres.in/api/users?page=1", {
   method: "GET",
@@ -55,7 +55,7 @@ fetch("https://reqres.in/api/users?page=1", {
 
       let p = document.createElement("p");
       p.textContent =
-        "The view is amazing, so is the weather at bakuriani in summer.the apartment is comfortable and has everything you might need.anna is very pleasant and helpful even from a far.the stairs are fine if you dont forget something, my kids managed them fine.";
+      
       div.appendChild(img);
       div.appendChild(ul);
       ul.appendChild(li);
@@ -70,9 +70,7 @@ fetch("https://reqres.in/api/users?page=1", {
     p.appendChild(customerBox);
   });
 
-//   ?? jsdan orm ar shemeqma divebi ise ver davamate
 
-// start footer form fetch post
 
 let form = document.querySelector(".footer-form");
 let input = document.querySelector(".footeremail-input");
@@ -95,7 +93,5 @@ form.addEventListener("submit", function (event) {
     .then((subscribeEmail) => {
       inputValue.innerHTML = " ";
     });
-  // .catch((error) => {
-  //   alert("Server Error");
-  // });
+  
 });
